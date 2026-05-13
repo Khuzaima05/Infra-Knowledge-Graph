@@ -160,25 +160,25 @@ export function AnalysisProgressTracker({
               <div>
                 <span className="text-slate-500">Resources:</span>{' '}
                 <span className="font-medium text-slate-300">
-                  {status.statistics.total_resources}
+                  {status.statistics?.total_resources || 0}
                 </span>
               </div>
               <div>
                 <span className="text-slate-500">Modules:</span>{' '}
                 <span className="font-medium text-slate-300">
-                  {status.statistics.total_modules}
+                  {status.statistics?.total_modules || 0}
                 </span>
               </div>
               <div>
                 <span className="text-slate-500">Variables:</span>{' '}
                 <span className="font-medium text-slate-300">
-                  {status.statistics.total_variables}
+                  {status.statistics?.total_variables || 0}
                 </span>
               </div>
               <div>
                 <span className="text-slate-500">Providers:</span>{' '}
                 <span className="font-medium text-slate-300">
-                  {status.statistics.providers_count}
+                  {status.statistics?.providers_count || 0}
                 </span>
               </div>
             </div>
