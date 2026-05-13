@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+/* React Flow Styles */
+.react-flow__node {
+  @apply rounded-lg border border-slate-700;
+}
+
+.react-flow__node-default {
+  @apply bg-card;
+}
+
+.react-flow__node-input,
+.react-flow__node-output {
+  @apply bg-card;
+}
+
+.react-flow__edge {
+  @apply stroke-slate-600;
+}
+
+.react-flow__handle {
+  @apply bg-primary;
+}
