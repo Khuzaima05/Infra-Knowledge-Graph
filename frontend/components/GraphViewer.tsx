@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ReactFlow, {
   Node,
   Edge,
@@ -103,7 +103,7 @@ export default function GraphViewer({ repoId }: Props) {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         nodeTypes={nodeTypes}
-        onNodeClick={(event, node) => setSelectedNode(node)}
+        onNodeClick={(_event, node) => setSelectedNode(node)}
       >
         <Background color="#374151" />
         <Controls />

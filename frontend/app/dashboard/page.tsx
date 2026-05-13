@@ -25,7 +25,7 @@ export default function DashboardPage() {
     }
   }
 
-  const handleRepositoryAdded = (newRepo: any) => {
+  const handleRepositoryAdded = (_newRepo: any) => {
     fetchRepositories()
     toast.success('Repository analysis started!')
   }

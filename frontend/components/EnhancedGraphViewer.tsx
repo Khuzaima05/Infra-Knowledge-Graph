@@ -17,7 +17,7 @@ import ReactFlow, {
 import 'reactflow/dist/style.css'
 import axios from 'axios'
 import toast from 'react-hot-toast'
-import { Search, X, ZoomIn, ZoomOut, Maximize2, Filter, Eye, EyeOff } from 'lucide-react'
+import { Search, X, Maximize2, Filter, Eye, EyeOff } from 'lucide-react'
 import ResourceNode from './graph/ResourceNode'
 import VariableNode from './graph/VariableNode'
 import ModuleNode from './graph/ModuleNode'
@@ -56,12 +56,12 @@ function GraphViewerContent({ repoId }: Props) {
   const [searchTerm, setSearchTerm] = useState('')
   const [filterType, setFilterType] = useState<string>('all')
   const [highlightedNodes, setHighlightedNodes] = useState<Set<string>>(new Set())
-  const [highlightedEdges, setHighlightedEdges] = useState<Set<string>>(new Set())
+  const [_highlightedEdges, setHighlightedEdges] = useState<Set<string>>(new Set())
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [showMiniMap, setShowMiniMap] = useState(true)
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false)
   
-  const { fitView, zoomIn, zoomOut } = useReactFlow()
+  const { fitView } = useReactFlow()
 
   // Keyboard shortcut for command palette (Cmd/Ctrl + K)
   useEffect(() => {
@@ -295,7 +295,7 @@ function GraphViewerContent({ repoId }: Props) {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         nodeTypes={nodeTypes}
-        onNodeClick={(event, node) => setSelectedNode(node)}
+        onNodeClick={(_event, node) => setSelectedNode(node)}
         fitView
         attributionPosition="bottom-left"
         className="bg-slate-900"

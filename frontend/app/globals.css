@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  @apply border-border;
+  border-color: #334155;
 }
 
 body {
@@ -31,3 +31,5 @@ body {
 .react-flow__handle {
   @apply bg-primary;
 }
+
+/* Made with Bob */

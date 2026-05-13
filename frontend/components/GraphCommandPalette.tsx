@@ -29,7 +29,7 @@ const NODE_TYPE_COLORS: Record<string, string> = {
 }
 
 export default function GraphCommandPalette({
-  repoId,
+  repoId: _repoId,
   nodes,
   onNodeSelect,
   isOpen,
